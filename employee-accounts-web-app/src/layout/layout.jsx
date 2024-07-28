@@ -20,6 +20,7 @@ export function Layout() {
                         <Nav.Link href="/update">Update Employee Profile</Nav.Link>
                         <Nav.Link href="/delete">Delete Employee Profile</Nav.Link>
                         <Nav.Link href="/contact">Contact Us</Nav.Link>
+                        <Nav.Link href="/signin">My Account</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

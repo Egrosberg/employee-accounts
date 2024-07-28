@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { Amplify } from 'aws-amplify';
+
+// import awsmobile from './aws/aws-exports';
+import { Authenticator } from '@aws-amplify/ui-react';
+// import awsmobile from './aws/aws-exports.js';
+
 import reportWebVitals from './reportWebVitals';
+import awsconfig from './aws/aws-exports'; // Adjust path as per your project structur
+// Amplify.configure(awsmobile);
+Amplify.configure(awsconfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Authenticator>
+      <App />
+    </Authenticator>
   </React.StrictMode>
 );
 
@@ -15,3 +26,8 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
+
